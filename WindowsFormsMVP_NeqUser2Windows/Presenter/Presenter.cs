@@ -13,6 +13,9 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
     {
         ILoginView LoginView;
         IModel Model;
+        IPresenter presenter;
+        IPresenter presenter2;
+
 
         public Presenter(ILoginView _loginView, IModel _model)
         {
@@ -20,13 +23,36 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             this.LoginView = _loginView;
             LoginView.Enter += LoginView_Enter;
             LoginView.AddUser += LoginView_AddUser;
+            LoginView.Change += LoginView_Change;
+        }
+        public Presenter(ILoginView _loginView, IModel _model,IPresenter _presenter)
+        {
+            this.Model = _model;
+            this.LoginView = _loginView;
+            this.presenter = _presenter;
+            LoginView.Enter += LoginView_Enter;
+            LoginView.AddUser += LoginView_AddUser;
+            LoginView.Change += LoginView_Change;
+        }
+        public Presenter(ILoginView _loginView, IModel _model, IPresenter _presenter, IPresenter presenter2)
+        {
+            this.Model = _model;
+            this.LoginView = _loginView;
+            this.presenter = _presenter;
+            this.presenter2 = presenter2;
+            LoginView.Enter += LoginView_Enter;
+            LoginView.AddUser += LoginView_AddUser;
+            LoginView.Change += LoginView_Change;
+        }
+
+        private void LoginView_Change()
+        {
+            
         }
 
         private void LoginView_AddUser()
         {
-            PresenterSecondWindows presenterSecond = new PresenterSecondWindows(new Form2(), new ModelAddUserNew());
-           // presenterSecond.Run();
-           
+            presenter.Run();
         }
 
         private void LoginView_Enter()

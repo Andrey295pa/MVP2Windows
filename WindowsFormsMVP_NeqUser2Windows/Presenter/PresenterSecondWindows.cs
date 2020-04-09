@@ -12,6 +12,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
     {
         IModel model;
         INewUserView view;
+       
 
         public PresenterSecondWindows(INewUserView _view, IModel _model)
         {
@@ -19,6 +20,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             this.model = _model;
             this.view.RegUser += View_RegUser;
         }
+     
 
         private void View_RegUser()
         {

@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-     public interface IPresenter
+    public class PresenterChange : IPresenter
     {
-        void Run();
+
+
+        public void Run()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

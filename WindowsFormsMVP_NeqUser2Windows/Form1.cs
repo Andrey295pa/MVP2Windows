@@ -31,6 +31,7 @@ namespace WindowsFormsMVP_NeqUser2Windows
 
         public event Action Enter;
         public event Action AddUser;
+        public event Action Change;
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
@@ -49,6 +50,14 @@ namespace WindowsFormsMVP_NeqUser2Windows
                 AddUser.Invoke();
             }
         }
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if (Change != null)
+            {
+                Change.Invoke();
+            }
+        }
+
         public new void Show()
         {
             Application.Run(this);

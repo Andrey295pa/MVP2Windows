@@ -41,8 +41,8 @@ namespace WindowsFormsMVP_NeqUser2Windows
         }
         public new void Show()
         {
-            Application.Run(this);
-            
+            // Application.Run(this);
+            this.ShowDialog();
             
         }
     }

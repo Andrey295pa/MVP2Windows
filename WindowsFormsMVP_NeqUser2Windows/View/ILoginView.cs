@@ -12,5 +12,6 @@ namespace WindowsFormsMVP_NeqUser2Windows.View
         string Password { set; get; }
         event Action Enter;
         event Action AddUser;
+        event Action Change;
     }
 }

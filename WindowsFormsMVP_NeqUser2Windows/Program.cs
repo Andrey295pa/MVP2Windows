@@ -18,7 +18,8 @@ namespace WindowsFormsMVP_NeqUser2Windows
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Presenter.Presenter presenter = new Presenter.Presenter(new Form1(), new Model.Model());
+            Presenter.PresenterSecondWindows presenter2 = new PresenterSecondWindows(new Form2(), new Model.ModelAddUserNew());
+            Presenter.Presenter presenter = new Presenter.Presenter(new Form1(), new Model.Model(),presenter2);
             presenter.Run();
         }
     }

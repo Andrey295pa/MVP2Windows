@@ -34,6 +34,7 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnNewUser = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtLogin
@@ -90,11 +91,22 @@
             this.btnNewUser.UseVisualStyleBackColor = true;
             this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(21, 162);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(252, 23);
+            this.btnChange.TabIndex = 6;
+            this.btnChange.Text = "Change user";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 173);
+            this.ClientSize = new System.Drawing.Size(290, 206);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.lbPassword);
@@ -116,6 +128,7 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Button btnNewUser;
+        private System.Windows.Forms.Button btnChange;
     }
 }
 
