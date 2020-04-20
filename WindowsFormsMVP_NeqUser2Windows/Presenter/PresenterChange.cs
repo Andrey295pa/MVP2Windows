@@ -5,18 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using WindowsFormsMVP_NeqUser2Windows.Model;
 using WindowsFormsMVP_NeqUser2Windows.View;
-using WindowsFormsMVP_NeqUser2Windows.
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
     public class PresenterChange : IPresenterChange
     {
-        IModel model;
+        IModelChange model;
         IChangeView change;
 
         public PresenterChange() { }
 
-        public PresenterChange(IModel model, IChangeView changeView) 
+        public PresenterChange(IModelChange model, IChangeView changeView) 
         {
             this.model = model;
             this.change = changeView;

@@ -12,7 +12,7 @@ using WindowsFormsMVP_NeqUser2Windows.View;
 
 namespace WindowsFormsMVP_NeqUser2Windows
 {
-    public partial class Form3 : Form, IView
+    public partial class Form3 : Form, IChangeView
     {
         string NameChange
         {
@@ -36,6 +36,19 @@ namespace WindowsFormsMVP_NeqUser2Windows
             InitializeComponent();
         }
 
+        event Action IChangeView.SaveChange
+        {
+            add
+            {
+                throw new NotImplementedException();
+            }
+
+            remove
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         private void btnSaveChange_Click(object sender, EventArgs e)
         {
             if (SaveChange != null)
@@ -47,6 +60,21 @@ namespace WindowsFormsMVP_NeqUser2Windows
         public new void Show()
         {
             this.ShowDialog();
+        }
+
+        string IChangeView.NameChange()
+        {
+            throw new NotImplementedException();
+        }
+
+        string IChangeView.PasswordChange()
+        {
+            throw new NotImplementedException();
+        }
+
+        string IChangeView.LoginChange()
+        {
+            throw new NotImplementedException();
         }
     }
 }

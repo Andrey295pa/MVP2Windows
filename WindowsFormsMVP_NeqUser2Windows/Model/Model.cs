@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Model
 {
-    public class Model : IModel
+    public class Model : IModelMain
     {
         private string writePath { set; get; }
         public void Save(string name, string password)

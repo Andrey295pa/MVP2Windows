@@ -10,11 +10,11 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
     public class PresenterSecondWindows : IPresenterSecond
     {
-        IModel model;
+        IModelAddUser model;
         INewUserView view;
        
 
-        public PresenterSecondWindows(INewUserView _view, IModel _model)
+        public PresenterSecondWindows(INewUserView _view, IModelAddUser _model)
         {
             this.view = _view;
             this.model = _model;

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsMVP_NeqUser2Windows.Presenter;
+using Ninject;
+using Ninject.Modules;
 
 namespace WindowsFormsMVP_NeqUser2Windows
 {
@@ -22,8 +24,9 @@ namespace WindowsFormsMVP_NeqUser2Windows
             //Presenter.Presenter presenter = new Presenter.Presenter(new Form1(), new Model.Model(),presenter2);
             //presenter.Run();
 
-            Adapter adapter = new Adapter();
-            
+            var kernel = new StandardKernel(new LibraryModul());
+            var presenterMain = kernel.Get<Presenter.Presenter>();
+            presenterMain.Run();
         }
     }
 }

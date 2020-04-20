@@ -12,13 +12,13 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
     public class Presenter : IPresenterMain
     {
         ILoginView LoginView;
-        IModel Model;
+        IModelMain Model;
         IPresenter presenter;
         IPresenter presenter2;
 
         
 
-        public Presenter(ILoginView _loginView, IModel _model)
+        public Presenter(ILoginView _loginView, IModelMain _model)
         {
             this.Model = _model;
             this.LoginView = _loginView;
@@ -26,7 +26,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             LoginView.AddUser += LoginView_AddUser;
             LoginView.Change += LoginView_Change;
         }
-        public Presenter(ILoginView _loginView, IModel _model,IPresenter _presenter)
+        public Presenter(ILoginView _loginView, IModelMain _model,IPresenter _presenter)
         {
             this.Model = _model;
             this.LoginView = _loginView;
@@ -35,7 +35,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             LoginView.AddUser += LoginView_AddUser;
             LoginView.Change += LoginView_Change;
         }
-        public Presenter(ILoginView _loginView, IModel _model, IPresenter _presenter, IPresenter presenter2)
+        public Presenter(ILoginView _loginView, IModelMain _model, IPresenter _presenter, IPresenter presenter2)
         {
             this.Model = _model;
             this.LoginView = _loginView;

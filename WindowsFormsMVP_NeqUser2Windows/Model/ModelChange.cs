@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Model
 {
-    public class ModelChange : IModel
+    public class ModelChange : IModelChange
     {
         public void Save(string name, string password)
         {
