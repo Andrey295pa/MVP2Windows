@@ -8,7 +8,7 @@ using WindowsFormsMVP_NeqUser2Windows.View;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-    public class PresenterSecondWindows : IPresenter
+    public class PresenterSecondWindows : IPresenterSecond
     {
         IModel model;
         INewUserView view;

@@ -9,13 +9,14 @@ using WindowsFormsMVP_NeqUser2Windows.View;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-    public class Presenter : IPresenter
+    public class Presenter : IPresenterMain
     {
         ILoginView LoginView;
         IModel Model;
         IPresenter presenter;
         IPresenter presenter2;
 
+        
 
         public Presenter(ILoginView _loginView, IModel _model)
         {
@@ -64,8 +65,10 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             
         }
 
+
         public void Run()
         {
+           
             LoginView.Show();
         }
     }

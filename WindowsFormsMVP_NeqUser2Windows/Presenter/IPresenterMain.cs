@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-     public interface IPresenter
+    public interface IPresenterMain: IPresenter
     {
-        void Run();
-
-       // void Run(string txt);
-    }
-
-    public interface IPresenter <T>
-    {
-        void Run(T arg);
     }
 }

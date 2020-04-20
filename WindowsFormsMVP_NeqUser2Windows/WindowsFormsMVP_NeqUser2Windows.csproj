@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,9 @@
     <Compile Include="Model\ModelAddUserNew.cs" />
     <Compile Include="Model\ModelChange.cs" />
     <Compile Include="Presenter\IPresenter.cs" />
+    <Compile Include="Presenter\IPresenterChange.cs" />
+    <Compile Include="Presenter\IPresenterMain.cs" />
+    <Compile Include="Presenter\IPresenterSecond.cs" />
     <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Presenter\PresenterChange.cs" />
     <Compile Include="Presenter\PresenterSecondWindows.cs" />
