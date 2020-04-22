@@ -9,12 +9,10 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
      public interface IPresenter
     {
         void Run();
-
-       // void Run(string txt);
     }
 
-    public interface IPresenter <T>
+    public interface IPresenter<T1, T2> 
     {
-        void Run(T arg);
+        void Run(T1 t1,T2 t2);
     }
 }

@@ -8,9 +8,9 @@ namespace WindowsFormsMVP_NeqUser2Windows.View
 {
     public interface IChangeView:IView
     {
-        string NameChange();
-        string PasswordChange();
-        string LoginChange();
+        string NameChange { set; get; }
+        string PasswordChange { set; get; }
+        string LoginChange { set; get; }
 
         event Action SaveChange;
     }

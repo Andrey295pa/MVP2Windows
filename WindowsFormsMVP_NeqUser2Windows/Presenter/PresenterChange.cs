@@ -8,10 +8,12 @@ using WindowsFormsMVP_NeqUser2Windows.View;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-    public class PresenterChange : IPresenterChange
+    public class PresenterChange : IPresenterChange<string,string>
     {
         IModelChange model;
         IChangeView change;
+        string name;
+        string password;
 
         public PresenterChange() { }
 
@@ -24,12 +26,15 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 
         private void Change_SaveChange()
         {
-            model.Save(change.NameChange(),change.PasswordChange());
+            model.Save(name,password);
         }
 
-        public void Run()
+        public new void Run(string a, string b)
         {
+            this.name = a;
+            this.password = b;
             change.Show();
         }
+
     }
 }

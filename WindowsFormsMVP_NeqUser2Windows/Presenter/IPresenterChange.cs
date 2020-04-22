@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 {
-    public interface IPresenterChange : IPresenter
+    public interface IPresenterChange <T,Y>: IPresenter<T, Y>
     {
     }
 }

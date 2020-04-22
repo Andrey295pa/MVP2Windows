@@ -26,7 +26,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
             LoginView.AddUser += LoginView_AddUser;
             LoginView.Change += LoginView_Change;
         }
-        public Presenter(ILoginView _loginView, IModelMain _model,IPresenter _presenter)
+        public Presenter(ILoginView _loginView, IModelMain _model, IPresenter _presenter)
         {
             this.Model = _model;
             this.LoginView = _loginView;
@@ -48,7 +48,7 @@ namespace WindowsFormsMVP_NeqUser2Windows.Presenter
 
         private void LoginView_Change()
         {
-            
+            (presenter2 as PresenterChange).Run(this.LoginView.Name, this.LoginView.Password);
         }
 
         private void LoginView_AddUser()

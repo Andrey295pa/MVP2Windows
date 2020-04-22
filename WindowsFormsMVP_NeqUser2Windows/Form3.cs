@@ -14,39 +14,26 @@ namespace WindowsFormsMVP_NeqUser2Windows
 {
     public partial class Form3 : Form, IChangeView
     {
-        string NameChange
+        public string NameChange
         {
             set => txtNameChange.Name = value;
             get => txtNameChange.Name;
         }
-        string PasswordChange
+        public string PasswordChange
         {
             set => txtPasswordChange.Name = value;
             get => txtPasswordChange.Name;
         }
-        string LoginChange
+        public string LoginChange
         {
             set => txtLoginChange.Name = value;
             get => txtLoginChange.Name;
         }
 
-        event Action SaveChange;
-        public Form3()
+        public event Action SaveChange;
+         public Form3()
         {
             InitializeComponent();
-        }
-
-        event Action IChangeView.SaveChange
-        {
-            add
-            {
-                throw new NotImplementedException();
-            }
-
-            remove
-            {
-                throw new NotImplementedException();
-            }
         }
 
         private void btnSaveChange_Click(object sender, EventArgs e)
@@ -61,20 +48,6 @@ namespace WindowsFormsMVP_NeqUser2Windows
         {
             this.ShowDialog();
         }
-
-        string IChangeView.NameChange()
-        {
-            throw new NotImplementedException();
-        }
-
-        string IChangeView.PasswordChange()
-        {
-            throw new NotImplementedException();
-        }
-
-        string IChangeView.LoginChange()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
